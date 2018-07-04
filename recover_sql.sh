@@ -55,3 +55,5 @@ recover_sql
 }
 
 main
+
+for i in `mysql -uroot -predhat -e "show tables from xxzx" | grep -v "Tables_in_xxz"`;do mysql -uroot -predhat -e "select count(1) from xxzx.$i";done
