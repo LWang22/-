@@ -1,3 +1,6 @@
+这个脚本是yum安装nginx之后在/etc/init.d/nginx拷贝出来的，源码包安装之后，可以将此脚本拷贝到/etc/init.d/下，修改一些内容就可以使用了。
+具体我已经用“#” 表明。
+
 #!/bin/sh
 #
 # nginx        Startup script for nginx
@@ -33,11 +36,11 @@ if [ -f /etc/sysconfig/$sysconfig ]; then
     . /etc/sysconfig/$sysconfig
 fi
 
-nginx=${NGINX-/usr/sbin/nginx}
+nginx=${NGINX-/usr/sbin/nginx}       #修改成真实路径
 prog=`/bin/basename $nginx`
-conffile=${CONFFILE-/etc/nginx/nginx.conf}
-lockfile=${LOCKFILE-/var/lock/subsys/nginx}
-pidfile=${PIDFILE-/var/run/nginx.pid}
+conffile=${CONFFILE-/etc/nginx/nginx.conf}   #修改成真实路径
+lockfile=${LOCKFILE-/var/lock/subsys/nginx}  
+pidfile=${PIDFILE-/var/run/nginx.pid}        #修改成真实路径
 SLEEPMSEC=${SLEEPMSEC-200000}
 UPGRADEWAITLOOPS=${UPGRADEWAITLOOPS-5}
 RETVAL=0
