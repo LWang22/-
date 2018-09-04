@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-
+#UES：直接执行脚本即可后，配置环境变量。使用pyen  python版本管理器进行版本管理
+#安装依赖
+yum -y install gcc gcc-c++ make git patch openssl-devel zlib-devel readline-devel sqlite-devel bzip2-devel bzip2-libs
 set -e
 [ -n "$PYENV_DEBUG" ] && set -x
 
