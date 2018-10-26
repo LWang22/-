@@ -1,7 +1,8 @@
 #!/bin/bash
 #zabbix安装的相关版本信息
 #linux：Centos 6.9 x64
-#zabbix；4.0
+#zabbix：4.0
+#Description: automatic installation of ZABBIX
 #############################
 
 ADDESS_IP=`curl -s ifconfig.me`
